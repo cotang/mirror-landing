@@ -1,0 +1,97 @@
+//------------------------------------------------------------------------------
+//  Базовые стили
+//------------------------------------------------------------------------------
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+body {
+  margin: 0;
+  background-color: $body-bg;
+  color: $text-color;
+  font-family: 'Gabriela', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  font-size: $font-size;
+  line-height: normal;
+}
+
+
+a {
+  color: $text-color;
+  text-decoration: none;
+  @include transition();
+
+  &:hover, &:focus {
+    text-decoration: none;
+  }
+}
+
+button, input[type="submit"]{
+  @include transition();
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+.bg-pink{
+  background-color: $pink;
+  padding: 0 10px;
+}
+.color-pink{
+  color: $pink;
+}
+.color-violet{
+  color: $violet;
+}
+
+.bb-violet{
+  display: inline-block;
+  border-bottom: 3px solid $violet;
+}
+.bb-white{
+  display: inline-block;
+  border-bottom: 2px solid $white;
+}
+
+
+.container{
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  max-width: 1200px;
+
+  @media (max-width: $breakpoint-xl){
+    max-width: 768px;
+  }
+  @media (max-width: $breakpoint-md){
+    max-width: 100% !important;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.row{
+  @media (max-width: $breakpoint-md){
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+.col-xs-12{
+  @media (max-width: $breakpoint-md){
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

@@ -1,0 +1,216 @@
+.promo{
+  background-image: url(../img/header-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: $text-white;
+  padding-bottom: 80px;
+  @media (max-width: $breakpoint-md){
+    padding-bottom: 15px;
+    background-position: 25% 100px;
+    background-size: 200% auto;
+    background-color: #000;
+  }
+
+  &__wrapper{
+    position: relative;
+    .logo{
+      @media (max-width: $breakpoint-md){
+        width: 100%;
+        max-width: 100%;
+        text-align: center;
+        padding-top: 12px;
+        padding-bottom: 13px;
+      }
+    }
+  }
+  &__btn-wrapper{
+    position: absolute;
+    top: 30px;
+    right: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 480px;
+    @media (max-width: $breakpoint-md){
+      position: relative;
+      top: 0;
+      width: 100%;
+      justify-content: center;
+    }
+    .tel{
+      @media (max-width: $breakpoint-md){
+        margin: 10px 0;
+        position: relative;
+        z-index: 1;
+      }
+    }
+    .callback{
+      @media (max-width: $breakpoint-md){
+        position: relative;
+        z-index: 1;
+      }
+    }
+    &:after{
+      @media (max-width: $breakpoint-md){
+        content: '';
+        position: absolute;
+        z-index: 0;
+        pointer-events: none;
+        top: 30px;
+        left: 0;
+        width: 100%;
+        height: 100px;
+        background-image: linear-gradient(to bottom, rgba(0,0,0,0.5) 0, transparent 100%);
+      }
+    }
+  }
+
+  &__title{
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+    font-size: 38.75px;
+    line-height: (50.3/38.75);
+    padding: 265px 0 20px;
+    margin: 0 -10px;
+    font-weight: normal;
+    @media (max-width: $breakpoint-md){
+      padding: 130px 0 20px;
+      font-size: 20px;
+    }
+  }
+  &__advantages{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    @media (max-width: $breakpoint-md){
+      margin-bottom: -30px;
+    }
+  }
+  &__advantage-item{
+    flex: 0 0 25%;
+    max-width: 25%;
+    text-align: center;
+    font-size: 16px;
+    @media (max-width: $breakpoint-md){
+      flex: 0 0 50%;
+      max-width: 50%;
+      margin: 0 0 30px;
+      line-height: 1.42;
+    }
+  }
+}
+
+.mirror{
+  &__img{
+    position: relative;
+    left: 25px;
+    top: -5px;
+    @media (max-width: $breakpoint-md){
+      left: 0;
+      top: 0;
+    }
+
+    &:after{
+      content: '';
+      position: absolute;
+      right: 80px;
+      bottom: 20px;
+      width: 137px;
+      height: 137px;
+      background-image: url(../img/last-12.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      @media (max-width: $breakpoint-md){
+        transform: scale(0.54);
+        right: 10px;
+        bottom: -5px;
+      }
+    }
+  }
+  &__prices{
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    @media (max-width: $breakpoint-md){
+      bottom: 15px;
+    }
+  }
+  &__old-price{
+    text-decoration: line-through;
+    color: $pink;
+    font-size: 22px;
+    line-height: (28/22);
+    margin-bottom: 10px;
+    @media (max-width: $breakpoint-md){
+      font-size: 12px;
+      margin-bottom: 5px;
+    }
+  }
+  &__new-price{
+    font-size: 39px;
+    @media (max-width: $breakpoint-md){
+      font-size: 22px;
+    }
+  }
+  &__btn-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 20px 20px 50px;
+    @media (max-width: $breakpoint-md){
+      margin: 10px;
+      justify-content: center;
+    }
+  }
+  &__text{
+    margin-left: 20px;
+    @media (max-width: $breakpoint-md){
+      margin-left: 0;
+      margin-top: 20px;
+      font-size: 14px;
+    }
+    br{
+      @media (max-width: $breakpoint-md){
+        display: none;
+      }
+    }
+  }
+}
+
+
+.logo{
+  color: $text-white;
+  font-size: 16px;
+  line-height: (19/16);
+  padding: 30px 40px;
+  max-width: 240px;
+  display: inline-block;
+  &--pink{
+    background-color: $pink;
+    padding: 20px 40px;
+  }
+  &--violet{
+    background-color: $violet;
+  }
+}
+.callback{
+  color: $text-white;
+  border: 1px solid $pink;
+  padding: 2px 15px;
+  border-radius: 15px;
+  font-size: 14px;
+  line-height: 2;
+}
+.tel{
+  color: $text-white;
+  font-size: 24px;
+  &:before{
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 0.5em;
+    @include sprite($s-tel);
+  }
+}

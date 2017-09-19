@@ -1,0 +1,205 @@
+.header{
+  &__contacts{
+    background-color: $light-blue;
+    @media (max-width: $breakpoint-xl){
+      display: none;
+    }
+  }
+  &__contacts-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    font-weight: bold;
+    font-size: $font-size-header;
+    padding: 5px 0;
+  }
+  &__work{
+    flex: 1 1 auto;
+    letter-spacing: 0.05em;
+  }
+  &__work-inner{
+    display: none;
+    @media (max-width: $breakpoint-xl){
+      display: block;
+      padding-left: 40px;
+      padding-right: 50px;
+    }
+    @media (max-width: $breakpoint-md){
+      padding-left: 20px !important;
+    }
+  }
+  &__address{
+    letter-spacing: 0.05em;
+    &:before{
+      content: '';
+      display: inline-block;
+      margin-right: 5px;
+      width: 11px;
+      height: 15px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-image: url(../img/placeholder-for-locate-places-on-maps.svg);
+    }
+  }
+  &__email{
+    letter-spacing: 0.05em;
+    color: $text-color;
+    padding-left: 20px;
+    &:before{
+      content: '';
+      display: inline-block;
+      margin-right: 5px;
+      width: 17px;
+      height: 13px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-image: url(../img/close-envelope.svg);
+    }
+  }
+  &__tel{
+    letter-spacing: 0.05em;
+    color: $text-color;
+    padding-left: 20px;
+    &:before{
+      content: '';
+      display: inline-block;
+      margin-right: 5px;
+      width: 15px;
+      height: 15px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-image: url(../img/phone-receiver.svg);
+    }
+  }
+  &__btn{
+    @media (max-width: $breakpoint-xl){
+      display: none;
+    }
+  }
+
+  &__inner-wrapper{
+    display: flex;
+    // flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    position: relative;
+    &:after{
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      bottom: -1px;
+      left: 0;
+      background-color: #d0d0d0;
+    }
+    @media (max-width: $breakpoint-xl){
+      justify-content: flex-start;
+    }
+  }
+
+  &__mobile{
+    display: none;
+    @media (max-width: $breakpoint-xl){
+      display: block;
+    }
+  }
+  &__mobile-inner{
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    &:after{
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      bottom: -1px;
+      left: 0;
+      background-color: #d0d0d0;
+    }
+  }
+  &__btn-mobile{
+    padding-left: 20px;
+    @media (max-width: $breakpoint-md){
+      padding-left: 5px;
+    }
+    .btn{
+      @media (max-width: $breakpoint-md){
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+    }
+  }
+
+}
+
+.logo{
+  display: block;
+  width: 68px;
+  height: 64px;
+}
+
+.nav{
+  &__list{
+    padding-left: 0;
+    margin: 0;
+    list-style-type: none;
+    display: flex;
+    text-transform: uppercase;
+    font-size: $font-size-nav;
+    @media (max-width: $breakpoint-xl){
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: $white;
+      text-align: center;
+      z-index: 2;
+    }
+  }
+  .menu-item{
+    padding: 5px 10px;
+    > a{
+      color: $text-color;
+      display: block;
+    }
+  }
+  .current-menu-item{
+    > a{
+      border-bottom: 2px solid $blue;
+    }
+  }
+  &__hamburger{
+    display: none;
+    @media (max-width: $breakpoint-md){
+      right: 0px !important;
+    }
+    @media (max-width: $breakpoint-xl){
+      display: block;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 20px;
+    }
+
+  }
+}
+
+
+
+
+
+.hamburger{
+  background-image: url(../img/001-menu.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+}

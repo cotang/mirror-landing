@@ -1,0 +1,39 @@
+.discount{
+  padding: 60px 0 100px;
+  background-image: url(../img/shadow.png);
+  background-position: 0 100%;
+  background-repeat: repeat-x;
+  @media (max-width: $breakpoint-md){
+    padding: 20px 0 0;
+    background-image: none;
+  }
+  &__title{
+    font-size: 38.75px;
+    line-height: (50.3/38.75);
+    font-weight: normal;
+    text-align: center;
+    margin: 0 0 65px;
+    text-transform: uppercase;
+    color: $text-pink;
+    @media (max-width: $breakpoint-md){
+      font-size: 18px;
+      margin: 0 0 30px;
+    }
+  }
+  &__form{
+    margin-left: -30px;
+    margin-right: 70px;
+    border-radius: 10px;
+    overflow: hidden;
+    @media (max-width: $breakpoint-md){
+      margin: 0 10px;
+    }
+  }
+  &__img{
+    margin-left: 10px;
+    margin-right: 50px;
+    @media (max-width: $breakpoint-md){
+      display: none;
+    }
+  }
+}
